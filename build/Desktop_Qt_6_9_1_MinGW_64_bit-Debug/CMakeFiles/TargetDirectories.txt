@@ -1,0 +1,9 @@
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/Windows-Based-Library-Management-System.dir
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/Windows-Based-Library-Management-System_autogen_timestamp_deps.dir
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/Windows-Based-Library-Management-System_autogen.dir
