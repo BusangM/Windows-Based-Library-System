@@ -1,2 +1,3 @@
-# todo
-This is my TODO app, refining my knowledge on state management
+# Windows Based Library System
+
+This project is an attempt to build a windows based system using the Qt framework
