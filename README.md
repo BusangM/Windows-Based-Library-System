@@ -2,6 +2,55 @@
 
 A comprehensive Windows-based Library Management System built with C++ and Qt Framework, demonstrating advanced object-oriented programming concepts, template usage, and custom library integration.
 
+## Project Setup
+### Prerequisites
+
+- Qt Framework 6.x or 5.x
+- CMake 3.16 or higher
+- C++ Compiler with C++17 support (MinGW, MSVC, or GCC)
+- Qt Creator (recommended IDE)
+
+## Project Structure Requirements
+This project consists of two separate components that must be set up correctly:
+
+1. Main Application - Library Management System
+2. Custom Library - LibraryUtils (separate project)
+
+## Setup Instructions
+
+### Step 1 Download project
+
+```
+downloaded_project/
+├── Windows-Based-Library-Management-System/  (Main project)
+└── LibraryUtils/                             (Custom library)
+```
+### Step 2: Build the Custom Library First
+
+- Open Qt Creator
+- File → Open File or Project
+- Navigate to LibraryUtils folder
+- Open CMakeLists.txt
+- Configure with your Qt kit
+- Build the library (Ctrl+B)
+- Note the build output path 
+
+### Step 3: Build the Main Application
+
+- In Qt Creator, File → Open File or Project
+- Navigate to Windows-Based-Library-Management-System folder
+- Open CMakeLists.txt
+- Configure with your Qt kit
+- Verify library path in CMakeLists.txt matches your LibraryUtils - build location
+- Build the main application (Ctrl+B)
+- Run the application (Ctrl+R)
+
+### Important Notes
+
+- Both projects must be built for the application to work
+- Relative paths are used - maintain the folder structure as shown
+- Library builds first - the main application depends on LibraryUtils
+- Build configurations must match (Debug/Release) between library and main app
 
 ## Features
 
