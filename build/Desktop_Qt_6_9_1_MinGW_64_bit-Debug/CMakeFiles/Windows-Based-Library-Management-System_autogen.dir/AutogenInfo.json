@@ -378,6 +378,12 @@
 			"MU",
 			"EWIEGA46WW/moc_magazine.cpp",
 			null
+		],
+		[
+			"C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/storage.h",
+			"MU",
+			"EWIEGA46WW/moc_storage.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],

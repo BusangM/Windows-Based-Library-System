@@ -5,7 +5,11 @@ Magazine::Magazine(QString magazineTitle, QString magazineAuthor, int magazineId
 {
 }
 
-QString Magazine::displayInfo()
+QString Magazine::displayInfo() const
 {
     return "Magazine: " + title + " by " + author;
+}
+
+Magazine::Magazine() : LibraryItem("", "", 0)
+{
 }

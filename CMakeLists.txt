@@ -29,6 +29,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         book.h book.cpp
         libraryitem.h libraryitem.cpp
         magazine.h magazine.cpp
+        storage.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Windows-Based-Library-Management-System APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

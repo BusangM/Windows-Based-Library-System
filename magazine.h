@@ -8,7 +8,8 @@ class Magazine : public LibraryItem
 {
 public:
     Magazine(QString magazineTitle, QString magazineAuthor, int magazineId);
-    QString displayInfo() override;
+    QString displayInfo() const override;
+    Magazine();
 };
 
 #endif // MAGAZINE_H

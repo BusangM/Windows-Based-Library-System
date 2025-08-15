@@ -8,9 +8,9 @@
 class book: public LibraryItem
 {
 public:
-
+    book();
     book(QString bookTitle, QString bookAuthor, int bookId);
-    QString displayInfo() override;
+    QString displayInfo() const override;
 };
 
 #endif // BOOK_H

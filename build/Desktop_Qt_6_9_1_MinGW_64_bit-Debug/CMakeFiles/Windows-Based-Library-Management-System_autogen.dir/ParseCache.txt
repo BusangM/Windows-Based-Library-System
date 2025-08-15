@@ -378,6 +378,8 @@ C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librar
  mdp:C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/moc_predefs.h
  mdp:C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.h
  mdp:C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.h
+ mdp:C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.h
+ mdp:C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/storage.h
 C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.cpp
 C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.cpp
  uic:./ui_librarymainwindow.h
@@ -386,4 +388,6 @@ C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/main.c
 C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.h
 C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.h
 C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.cpp
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/storage.h
 C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.cpp
+C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/storage.cpp

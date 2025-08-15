@@ -49,6 +49,7 @@ set(OLD_GLOB
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.cpp"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.cpp"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/main.cpp"
+  "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/storage.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -73,6 +74,7 @@ set(OLD_GLOB
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.h"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.h"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.h"
+  "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/storage.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

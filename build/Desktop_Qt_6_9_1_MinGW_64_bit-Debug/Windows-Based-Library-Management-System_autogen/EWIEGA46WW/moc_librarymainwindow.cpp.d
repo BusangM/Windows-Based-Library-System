@@ -374,4 +374,6 @@ C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.h \
-  C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.h
+  C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.h \
+  C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.h \
+  C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/storage.h

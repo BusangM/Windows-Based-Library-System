@@ -37,6 +37,11 @@ public:
     QLabel *label_2;
     QRadioButton *radioButton;
     QRadioButton *radioButton_2;
+    QLineEdit *lineEdit_3;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton_5;
     QMenuBar *menubar;
     QMenu *menuLibaray_Management_System;
     QStatusBar *statusbar;
@@ -59,7 +64,7 @@ public:
         pushButton->setGeometry(QRect(380, 280, 90, 29));
         listWidget = new QListWidget(centralwidget);
         listWidget->setObjectName("listWidget");
-        listWidget->setGeometry(QRect(290, 340, 256, 192));
+        listWidget->setGeometry(QRect(430, 340, 311, 192));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setGeometry(QRect(270, 90, 91, 20));
@@ -72,6 +77,21 @@ public:
         radioButton_2 = new QRadioButton(centralwidget);
         radioButton_2->setObjectName("radioButton_2");
         radioButton_2->setGeometry(QRect(360, 240, 111, 25));
+        lineEdit_3 = new QLineEdit(centralwidget);
+        lineEdit_3->setObjectName("lineEdit_3");
+        lineEdit_3->setGeometry(QRect(60, 340, 211, 28));
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setGeometry(QRect(180, 410, 90, 29));
+        pushButton_3 = new QPushButton(centralwidget);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setGeometry(QRect(60, 410, 101, 29));
+        pushButton_4 = new QPushButton(centralwidget);
+        pushButton_4->setObjectName("pushButton_4");
+        pushButton_4->setGeometry(QRect(140, 480, 71, 29));
+        pushButton_5 = new QPushButton(centralwidget);
+        pushButton_5->setObjectName("pushButton_5");
+        pushButton_5->setGeometry(QRect(290, 340, 90, 29));
         LibraryMainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(LibraryMainWindow);
         menubar->setObjectName("menubar");
@@ -100,6 +120,10 @@ public:
         label_2->setText(QCoreApplication::translate("LibraryMainWindow", "Item Author:", nullptr));
         radioButton->setText(QCoreApplication::translate("LibraryMainWindow", "Book", nullptr));
         radioButton_2->setText(QCoreApplication::translate("LibraryMainWindow", "Magazine", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("LibraryMainWindow", "Sort by Title", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("LibraryMainWindow", "Sort by Author", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("LibraryMainWindow", "Clear", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("LibraryMainWindow", "Search", nullptr));
         menuLibaray_Management_System->setTitle(QCoreApplication::translate("LibraryMainWindow", "Libaray Management System", nullptr));
     } // retranslateUi
 

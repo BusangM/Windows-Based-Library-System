@@ -16,9 +16,9 @@ protected:
 public:
     LibraryItem(QString itemTitle, QString itemAuthor, int itemId);
 
-    virtual QString displayInfo();
-    QString getAuthor();
-    QString getTitle();
+    virtual QString displayInfo() const;
+    QString getAuthor() const;
+    QString getTitle() const;
 
     int getId();
 };

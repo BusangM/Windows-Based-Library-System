@@ -8,18 +8,18 @@ LibraryItem::LibraryItem(QString itemTitle, QString itemAuthor, int itemId) {
 
 }
 
-QString LibraryItem::displayInfo()
+QString LibraryItem::displayInfo() const
 {
     return title + " by " + author;
 }
 
 // Getters
-QString LibraryItem::getTitle()
+QString LibraryItem::getTitle() const
 {
     return title;
 }
 
-QString LibraryItem::getAuthor()
+QString LibraryItem::getAuthor() const
 {
     return author;
 }

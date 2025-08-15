@@ -40,12 +40,27 @@ template <> constexpr inline auto LibraryMainWindow::qt_create_metaobjectdata<qt
     QtMocHelpers::StringRefStorage qt_stringData {
         "LibraryMainWindow",
         "onAddBookClicked",
-        ""
+        "",
+        "showStorageInfo",
+        "onSearchClicked",
+        "onSortByTitleClicked",
+        "onSortByAuthorClicked",
+        "onClearClicked"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Slot 'onAddBookClicked'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'showStorageInfo'
+        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onSearchClicked'
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onSortByTitleClicked'
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onSortByAuthorClicked'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onClearClicked'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -70,6 +85,11 @@ void LibraryMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->onAddBookClicked(); break;
+        case 1: _t->showStorageInfo(); break;
+        case 2: _t->onSearchClicked(); break;
+        case 3: _t->onSortByTitleClicked(); break;
+        case 4: _t->onSortByAuthorClicked(); break;
+        case 5: _t->onClearClicked(); break;
         default: ;
         }
     }
@@ -95,14 +115,14 @@ int LibraryMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 6;
     }
     return _id;
 }
