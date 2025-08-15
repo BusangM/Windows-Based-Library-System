@@ -4,6 +4,10 @@
 #include "storage.h"
 #include "book.h"
 #include <QMessageBox>
+#include <QFile>
+#include <QTextStream>
+#include <QStandardPaths>
+#include <QDir>
 
 LibraryMainWindow::LibraryMainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -24,6 +28,7 @@ LibraryMainWindow::LibraryMainWindow(QWidget *parent)
 
     // Set Book as default selection
     ui->radioButton->setChecked(true);
+    loadFromFile();
 }
 
 LibraryMainWindow::~LibraryMainWindow()
@@ -41,7 +46,76 @@ void LibraryMainWindow::showStorageInfo()
     this->setWindowTitle("Library System - " + info);
 }
 
+void LibraryMainWindow::saveToFile()
+{
+    QString fileName = "library_data.txt";
+    QFile file(fileName);
 
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&file);
+
+        // Save books
+        for (int i = 0; i < bookStorage.getSize(); i++) {
+            book bookItem = bookStorage.getItem(i);
+            out << "BOOK|" << bookItem.getTitle() << "|" << bookItem.getAuthor() << "|" << bookItem.getId() << "\n";
+        }
+
+        // Save magazines
+        for (int i = 0; i < magazineStorage.getSize(); i++) {
+            Magazine magazineItem = magazineStorage.getItem(i);
+            out << "MAGAZINE|" << magazineItem.getTitle() << "|" << magazineItem.getAuthor() << "|" << magazineItem.getId() << "\n";
+        }
+
+        file.close();
+        QMessageBox::information(this, "Success", "Data saved to library_data.txt");
+    } else {
+        QMessageBox::warning(this, "Error", "Could not save file!");
+    }
+}
+
+void LibraryMainWindow::loadFromFile()
+{
+    QString fileName = "library_data.txt";
+    QFile file(fileName);
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file);
+
+        // Clear existing storage
+        bookStorage = Storage<book>();
+        magazineStorage = Storage<Magazine>();
+        ui->listWidget->clear();
+
+        while (!in.atEnd()) {
+            QString line = in.readLine();
+            QStringList parts = line.split("|");
+
+            if (parts.size() >= 4) {
+                QString type = parts[0];
+                QString title = parts[1];
+                QString author = parts[2];
+                int id = parts[3].toInt();
+
+                if (type == "BOOK") {
+                    book newBook(title, author, id);
+                    bookStorage.addItem(newBook);
+                    ui->listWidget->addItem(newBook.displayInfo());
+                }
+                else if (type == "MAGAZINE") {
+                    Magazine newMagazine(title, author, id);
+                    magazineStorage.addItem(newMagazine);
+                    ui->listWidget->addItem(newMagazine.displayInfo());
+                }
+            }
+        }
+
+        file.close();
+        showStorageInfo();
+        QMessageBox::information(this, "Success", "Data loaded from library_data.txt");
+    } else {
+        QMessageBox::information(this, "Info", "No saved data file found. Starting fresh.");
+    }
+}
 
 void LibraryMainWindow::onSearchClicked()
 {
@@ -200,4 +274,5 @@ void LibraryMainWindow::onAddBookClicked()
     ui->lineEdit->clear();
     ui->lineEdit_2->clear();
     showStorageInfo();
+    saveToFile();
 }

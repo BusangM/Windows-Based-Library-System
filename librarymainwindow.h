@@ -39,5 +39,7 @@ private slots:
     void onSortByTitleClicked();
     void onSortByAuthorClicked();
     void onClearClicked();
+    void saveToFile();
+    void loadFromFile();
 };
 #endif // LIBRARYMAINWINDOW_H
