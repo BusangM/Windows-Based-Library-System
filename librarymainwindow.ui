@@ -43,21 +43,21 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>210</y>
+      <x>380</x>
+      <y>280</y>
       <width>90</width>
       <height>29</height>
      </rect>
     </property>
     <property name="text">
-     <string>Add Book</string>
+     <string>Add Item</string>
     </property>
    </widget>
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>290</y>
+      <x>290</x>
+      <y>340</y>
       <width>256</width>
       <height>192</height>
      </rect>
@@ -73,7 +73,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Book Title:</string>
+     <string>Item Title:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -86,7 +86,33 @@
      </rect>
     </property>
     <property name="text">
-     <string>Book Author:</string>
+     <string>Item Author:</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>200</y>
+      <width>111</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Book</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>240</y>
+      <width>111</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Magazine</string>
     </property>
    </widget>
   </widget>

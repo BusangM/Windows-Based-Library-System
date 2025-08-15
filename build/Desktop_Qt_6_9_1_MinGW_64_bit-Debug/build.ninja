@@ -73,6 +73,30 @@ build CMakeFiles/Windows-Based-Library-Management-System.dir/librarymainwindow.c
   OBJECT_DIR = CMakeFiles\Windows-Based-Library-Management-System.dir
   OBJECT_FILE_DIR = CMakeFiles\Windows-Based-Library-Management-System.dir
 
+build CMakeFiles/Windows-Based-Library-Management-System.dir/book.cpp.obj: CXX_COMPILER__Windows-Based-Library-Management-System_unscanned_Debug C$:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.cpp || cmake_object_order_depends_target_Windows-Based-Library-Management-System
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Windows-Based-Library-Management-System.dir\book.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Windows-Based-Library-Management-System.dir
+  OBJECT_FILE_DIR = CMakeFiles\Windows-Based-Library-Management-System.dir
+
+build CMakeFiles/Windows-Based-Library-Management-System.dir/libraryitem.cpp.obj: CXX_COMPILER__Windows-Based-Library-Management-System_unscanned_Debug C$:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.cpp || cmake_object_order_depends_target_Windows-Based-Library-Management-System
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Windows-Based-Library-Management-System.dir\libraryitem.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Windows-Based-Library-Management-System.dir
+  OBJECT_FILE_DIR = CMakeFiles\Windows-Based-Library-Management-System.dir
+
+build CMakeFiles/Windows-Based-Library-Management-System.dir/magazine.cpp.obj: CXX_COMPILER__Windows-Based-Library-Management-System_unscanned_Debug C$:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.cpp || cmake_object_order_depends_target_Windows-Based-Library-Management-System
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Windows-Based-Library-Management-System.dir\magazine.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Windows-Based-Library-Management-System.dir
+  OBJECT_FILE_DIR = CMakeFiles\Windows-Based-Library-Management-System.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Windows-Based-Library-Management-System
@@ -81,7 +105,7 @@ build CMakeFiles/Windows-Based-Library-Management-System.dir/librarymainwindow.c
 #############################################
 # Link the executable Windows-Based-Library-Management-System.exe
 
-build Windows-Based-Library-Management-System.exe: CXX_EXECUTABLE_LINKER__Windows-Based-Library-Management-System_Debug CMakeFiles/Windows-Based-Library-Management-System.dir/Windows-Based-Library-Management-System_autogen/mocs_compilation.cpp.obj CMakeFiles/Windows-Based-Library-Management-System.dir/main.cpp.obj CMakeFiles/Windows-Based-Library-Management-System.dir/librarymainwindow.cpp.obj | C$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a || Windows-Based-Library-Management-System_autogen Windows-Based-Library-Management-System_autogen_timestamp_deps
+build Windows-Based-Library-Management-System.exe: CXX_EXECUTABLE_LINKER__Windows-Based-Library-Management-System_Debug CMakeFiles/Windows-Based-Library-Management-System.dir/Windows-Based-Library-Management-System_autogen/mocs_compilation.cpp.obj CMakeFiles/Windows-Based-Library-Management-System.dir/main.cpp.obj CMakeFiles/Windows-Based-Library-Management-System.dir/librarymainwindow.cpp.obj CMakeFiles/Windows-Based-Library-Management-System.dir/book.cpp.obj CMakeFiles/Windows-Based-Library-Management-System.dir/libraryitem.cpp.obj CMakeFiles/Windows-Based-Library-Management-System.dir/magazine.cpp.obj | C$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a || Windows-Based-Library-Management-System_autogen Windows-Based-Library-Management-System_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

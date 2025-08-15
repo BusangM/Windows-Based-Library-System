@@ -2,6 +2,10 @@
 #define LIBRARYMAINWINDOW_H
 
 #include <QMainWindow>
+#include "book.h"
+#include <vector>
+#include <QButtonGroup>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +23,10 @@ public:
 
 private:
     Ui::LibraryMainWindow *ui;
+    std::vector<book> books;
+    QButtonGroup *itemTypeGroup;
+
+private slots:
+    void onAddBookClicked();
 };
 #endif // LIBRARYMAINWINDOW_H

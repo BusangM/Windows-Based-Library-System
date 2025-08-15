@@ -1,4 +1,5 @@
 Windows-Based-Library-Management-System_autogen/timestamp: \
+	C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
 	C:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
 	C:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h \
 	C:/Qt/6.9.1/mingw_64/include/QtCore/q20iterator.h \
@@ -150,7 +151,9 @@ Windows-Based-Library-Management-System_autogen/timestamp: \
 	C:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h \
 	C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+	C:/Qt/6.9.1/mingw_64/include/QtWidgets/QButtonGroup \
 	C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
+	C:/Qt/6.9.1/mingw_64/include/QtWidgets/qbuttongroup.h \
 	C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
 	C:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h \
 	C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabwidget.h \
@@ -584,14 +587,20 @@ Windows-Based-Library-Management-System_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/CMakeLists.txt \
+	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.cpp \
+	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.h \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/moc_predefs.h \
+	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.cpp \
+	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.h \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.cpp \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.h \
+	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.cpp \
+	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.h \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/main.cpp \
 	C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

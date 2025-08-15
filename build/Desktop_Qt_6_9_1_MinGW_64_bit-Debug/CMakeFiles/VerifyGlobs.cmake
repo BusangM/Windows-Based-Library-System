@@ -41,10 +41,13 @@ endif()
 # _directory_contents at C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/*.cpp")
 set(OLD_GLOB
+  "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.cpp"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/EWIEGA46WW/moc_librarymainwindow.cpp"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/mocs_compilation.cpp"
+  "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.cpp"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.cpp"
+  "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.cpp"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -64,9 +67,12 @@ endif()
 # _directory_contents at C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/*.h")
 set(OLD_GLOB
+  "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.h"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/include/ui_librarymainwindow.h"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/moc_predefs.h"
+  "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.h"
   "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.h"
+  "C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

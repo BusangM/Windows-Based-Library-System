@@ -1,5 +1,6 @@
 C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/EWIEGA46WW/moc_librarymainwindow.cpp: C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.h \
   C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Windows-Based-Library-Management-System_autogen/moc_predefs.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20iterator.h \
@@ -151,7 +152,9 @@ C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QButtonGroup \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qbuttongroup.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabwidget.h \
@@ -369,4 +372,6 @@ C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/build/
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
-  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
+  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
+  C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.h \
+  C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.h

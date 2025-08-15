@@ -356,9 +356,27 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.h",
+			"MU",
+			"EWIEGA46WW/moc_book.cpp",
+			null
+		],
+		[
+			"C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.h",
+			"MU",
+			"EWIEGA46WW/moc_libraryitem.cpp",
+			null
+		],
+		[
 			"C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_librarymainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.h",
+			"MU",
+			"EWIEGA46WW/moc_magazine.cpp",
 			null
 		]
 	],
@@ -434,7 +452,22 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/book.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/libraryitem.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/librarymainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/bumos/OneDrive/Documents/Windows-Based-Library-Management-System/magazine.cpp",
 			"MU",
 			null
 		],
