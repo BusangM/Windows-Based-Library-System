@@ -7,7 +7,8 @@
 #include <QFile>
 #include <QTextStream>
 #include <QStandardPaths>
-#include <QDir>
+#include "libraryutils.h"
+
 
 LibraryMainWindow::LibraryMainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -48,104 +49,99 @@ void LibraryMainWindow::showStorageInfo()
 
 void LibraryMainWindow::saveToFile()
 {
-    QString fileName = "library_data.txt";
-    QFile file(fileName);
-
-    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        QTextStream out(&file);
-
-        // Save books
-        for (int i = 0; i < bookStorage.getSize(); i++) {
-            book bookItem = bookStorage.getItem(i);
-            out << "BOOK|" << bookItem.getTitle() << "|" << bookItem.getAuthor() << "|" << bookItem.getId() << "\n";
-        }
-
-        // Save magazines
-        for (int i = 0; i < magazineStorage.getSize(); i++) {
-            Magazine magazineItem = magazineStorage.getItem(i);
-            out << "MAGAZINE|" << magazineItem.getTitle() << "|" << magazineItem.getAuthor() << "|" << magazineItem.getId() << "\n";
-        }
-
-        file.close();
-        QMessageBox::information(this, "Success", "Data saved to library_data.txt");
-    } else {
-        QMessageBox::warning(this, "Error", "Could not save file!");
+    QStringList data;
+    // Collect all data into QStringList format
+    for (int i = 0; i < bookStorage.getSize(); i++) {
+        book bookItem = bookStorage.getItem(i);
+        data << QString("BOOK|%1|%2|%3").arg(bookItem.getTitle(), bookItem.getAuthor(), QString::number(bookItem.getId()));
+    }
+    // Use LibraryUtils for saving
+    if (LibraryUtils::saveDataToFile("library_data.txt", data)) {
+        QMessageBox::information(this, "Success", "Data saved using LibraryUtils!");
     }
 }
 
 void LibraryMainWindow::loadFromFile()
 {
-    QString fileName = "library_data.txt";
-    QFile file(fileName);
+    // Use LibraryUtils to load data
+    QStringList data = LibraryUtils::loadDataFromFile("library_data.txt");
 
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QTextStream in(&file);
 
-        // Clear existing storage
-        bookStorage = Storage<book>();
-        magazineStorage = Storage<Magazine>();
-        ui->listWidget->clear();
+    // Clear existing storage
+    bookStorage = Storage<book>();
+    magazineStorage = Storage<Magazine>();
+    ui->listWidget->clear();
 
-        while (!in.atEnd()) {
-            QString line = in.readLine();
-            QStringList parts = line.split("|");
+    // Process loaded data
+    for (const QString& line : data) {
+        QStringList parts = line.split("|");
 
-            if (parts.size() >= 4) {
-                QString type = parts[0];
-                QString title = parts[1];
-                QString author = parts[2];
-                int id = parts[3].toInt();
+        if (parts.size() >= 4) {
+            QString type = parts[0];
+            QString title = parts[1];
+            QString author = parts[2];
+            int id = parts[3].toInt();
 
-                if (type == "BOOK") {
-                    book newBook(title, author, id);
-                    bookStorage.addItem(newBook);
-                    ui->listWidget->addItem(newBook.displayInfo());
-                }
-                else if (type == "MAGAZINE") {
-                    Magazine newMagazine(title, author, id);
-                    magazineStorage.addItem(newMagazine);
-                    ui->listWidget->addItem(newMagazine.displayInfo());
-                }
+            if (type == "BOOK") {
+                book newBook(title, author, id);
+                bookStorage.addItem(newBook);
+                ui->listWidget->addItem(newBook.displayInfo());
+            }
+            else if (type == "MAGAZINE") {
+                Magazine newMagazine(title, author, id);
+                magazineStorage.addItem(newMagazine);
+                ui->listWidget->addItem(newMagazine.displayInfo());
             }
         }
-
-        file.close();
-        showStorageInfo();
-        QMessageBox::information(this, "Success", "Data loaded from library_data.txt");
-    } else {
-        QMessageBox::information(this, "Info", "No saved data file found. Starting fresh.");
     }
+
+    showStorageInfo();
+    QMessageBox::information(this, "Success", "Data loaded using LibraryUtils!");
 }
 
 void LibraryMainWindow::onSearchClicked()
 {
-    QMessageBox::information(this, "Debug", "Search button clicked!");
     QString searchText = ui->lineEdit_3->text();
     ui->listWidget->clear();
 
-
     if (searchText.isEmpty()) {
-        // Show all books
+        // Show all items using LibraryUtils
+        QStringList allItems;
+
+        // Get all books
         for (int i = 0; i < bookStorage.getSize(); i++) {
-            book book = bookStorage.getItem(i);
-            ui->listWidget->addItem(book.displayInfo());
+            book bookItem = bookStorage.getItem(i);
+            allItems << bookItem.displayInfo();
         }
-        // Show all magazines
+
+        // Get all magazines
         for (int i = 0; i < magazineStorage.getSize(); i++) {
-            Magazine magazine = magazineStorage.getItem(i);
-            ui->listWidget->addItem(magazine.displayInfo());
+            Magazine magazineItem = magazineStorage.getItem(i);
+            allItems << magazineItem.displayInfo();
+        }
+
+        // Display all items
+        for (const QString& item : allItems) {
+            ui->listWidget->addItem(item);
         }
     } else {
-        // Search books
-        std::vector<book> foundBooks = bookStorage.searchByTitle(searchText);
-        for (book bookItem : foundBooks) {
-            ui->listWidget->addItem(bookItem.displayInfo());
+        // Use LibraryUtils for searching
+        QStringList allItems;
+
+        // Collect all items
+        for (int i = 0; i < bookStorage.getSize(); i++) {
+            allItems << bookStorage.getItem(i).displayInfo();
+        }
+        for (int i = 0; i < magazineStorage.getSize(); i++) {
+            allItems << magazineStorage.getItem(i).displayInfo();
         }
 
-        // Search magazines
-        std::vector<Magazine> foundMagazines = magazineStorage.searchByTitle(searchText);
-        for (Magazine magazineItem : foundMagazines) {
-            ui->listWidget->addItem(magazineItem.displayInfo());
+        // Search using LibraryUtils
+        QStringList searchResults = LibraryUtils::searchInList(allItems, searchText);
+
+        // Display results
+        for (const QString& result : searchResults) {
+            ui->listWidget->addItem(result);
         }
     }
 }
@@ -153,74 +149,57 @@ void LibraryMainWindow::onSearchClicked()
 
 void LibraryMainWindow::onSortByTitleClicked()
 {
-
-    QMessageBox::information(this, "Debug", "Sort by title button clicked!");
-
     ui->listWidget->clear();
 
-    // Get all items
-    std::vector<book> allBooks;
-    std::vector<Magazine> allMagazines;
+    // Collect all items into a QStringList
+    QStringList allItems;
 
+    // Add all books
     for (int i = 0; i < bookStorage.getSize(); i++) {
-        allBooks.push_back(bookStorage.getItem(i));
+        book bookItem = bookStorage.getItem(i);
+        allItems << bookItem.displayInfo();
     }
+
+    // Add all magazines
     for (int i = 0; i < magazineStorage.getSize(); i++) {
-        allMagazines.push_back(magazineStorage.getItem(i));
+        Magazine magazineItem = magazineStorage.getItem(i);
+        allItems << magazineItem.displayInfo();
     }
 
-    // Sort books by title
-    std::sort(allBooks.begin(), allBooks.end(), [](const book& a, const book& b) {
-        return a.getTitle() < b.getTitle();
-    });
-
-    // Sort magazines by title
-    std::sort(allMagazines.begin(), allMagazines.end(), [](const Magazine& a, const Magazine& b) {
-        return a.getTitle() < b.getTitle();
-    });
+    // Use LibraryUtils to sort by title
+    QStringList sortedItems = LibraryUtils::sortByTitle(allItems);
 
     // Display sorted items
-    for (const book& bookItem : allBooks) {
-        ui->listWidget->addItem(bookItem.displayInfo());
-    }
-    for (const Magazine& magazineItem : allMagazines) {
-        ui->listWidget->addItem(magazineItem.displayInfo());
+    for (const QString& item : sortedItems) {
+        ui->listWidget->addItem(item);
     }
 }
 
 void LibraryMainWindow::onSortByAuthorClicked()
 {
-    QMessageBox::information(this, "Debug", "Sort by author button clicked!");
-
     ui->listWidget->clear();
 
-    // Get all items
-    std::vector<book> allBooks;
-    std::vector<Magazine> allMagazines;
+    // Collect all items into a QStringList
+    QStringList allItems;
 
+    // Add all books
     for (int i = 0; i < bookStorage.getSize(); i++) {
-        allBooks.push_back(bookStorage.getItem(i));
+        book bookItem = bookStorage.getItem(i);
+        allItems << bookItem.displayInfo();
     }
+
+    // Add all magazines
     for (int i = 0; i < magazineStorage.getSize(); i++) {
-        allMagazines.push_back(magazineStorage.getItem(i));
+        Magazine magazineItem = magazineStorage.getItem(i);
+        allItems << magazineItem.displayInfo();
     }
 
-    // Sort books by author
-    std::sort(allBooks.begin(), allBooks.end(), [](const book& a, const book& b) {
-        return a.getAuthor() < b.getAuthor();
-    });
-
-    // Sort magazines by author
-    std::sort(allMagazines.begin(), allMagazines.end(), [](const Magazine& a, const Magazine& b) {
-        return a.getAuthor() < b.getAuthor();
-    });
+    // Use LibraryUtils to sort by author
+    QStringList sortedItems = LibraryUtils::sortByAuthor(allItems);
 
     // Display sorted items
-    for (const book& bookItem : allBooks) {
-        ui->listWidget->addItem(bookItem.displayInfo());
-    }
-    for (const Magazine& magazineItem : allMagazines) {
-        ui->listWidget->addItem(magazineItem.displayInfo());
+    for (const QString& item : sortedItems) {
+        ui->listWidget->addItem(item);
     }
 }
 
@@ -237,15 +216,9 @@ void LibraryMainWindow::onAddBookClicked()
     QString title = ui->lineEdit->text().trimmed();      // Title input field
     QString author = ui->lineEdit_2->text().trimmed();   // Author input field
 
-    // Validation - check for empty fields
-    if (title.isEmpty()) {
-        QMessageBox::warning(this, "Invalid Input", "Title cannot be empty!\nPlease enter a title.");
-        return;  // Exit function
-    }
-
-    if (author.isEmpty()) {
-        QMessageBox::warning(this, "Invalid Input", "Author cannot be empty!\nPlease enter an author.");
-        return;  // Exit function
+    if (!LibraryUtils::validateInput(title, author)) {
+        QMessageBox::warning(this, "Invalid Input", "Title and Author cannot be empty!\nPlease enter both fields.");
+        return;
     }
 
 

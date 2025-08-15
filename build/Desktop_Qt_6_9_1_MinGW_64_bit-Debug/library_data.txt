@@ -2,6 +2,5 @@ BOOK|Harry Potter|J.K. Rowling|1
 BOOK|1984|George Orwell|2
 BOOK|The Hobbit|J.R.R. Tolkien|3
 BOOK|Python Programming|Mark Lutz|4
-MAGAZINE|National Geographic|Various Authors|1
-MAGAZINE|Scientific American|Science Team|2
-MAGAZINE|Time Magazine|Time Inc|3
+BOOK|test_title|test_author|5
+BOOK|test_title_2|test_author_2|6

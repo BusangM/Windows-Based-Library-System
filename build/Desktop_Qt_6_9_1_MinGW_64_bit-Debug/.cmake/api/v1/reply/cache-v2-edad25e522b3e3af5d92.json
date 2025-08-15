@@ -1554,6 +1554,18 @@
 			"value" : "1"
 		},
 		{
+			"name" : "LIBRARYUTILS_LIB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Users/bumos/OneDrive/Documents/LibraryUtils/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/libLibraryUtils.dll.a"
+		},
+		{
 			"name" : "QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH",
 			"properties" : 
 			[

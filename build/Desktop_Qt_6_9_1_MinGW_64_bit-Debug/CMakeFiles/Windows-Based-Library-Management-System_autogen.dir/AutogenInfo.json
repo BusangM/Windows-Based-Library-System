@@ -412,6 +412,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"C:/Users/bumos/OneDrive/Documents/LibraryUtils",
 		"C:/Qt/6.9.1/mingw_64/include/QtCore",
 		"C:/Qt/6.9.1/mingw_64/include",
 		"C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++",

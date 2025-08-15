@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 
+
 set(TS_FILES Windows-Based-Library-Management-System_en_ZA.ts)
 
 set(PROJECT_SOURCES
@@ -54,6 +55,16 @@ else()
 endif()
 
 target_link_libraries(Windows-Based-Library-Management-System PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+
+# NOW add the library stuff AFTER the executable is defined
+include_directories("../LibraryUtils")
+find_library(LIBRARYUTILS_LIB libraryutils "../LibraryUtils/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug")
+
+# Link libraries
+target_link_libraries(Windows-Based-Library-Management-System PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+if(LIBRARYUTILS_LIB)
+    target_link_libraries(Windows-Based-Library-Management-System PRIVATE ${LIBRARYUTILS_LIB})
+endif()
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
